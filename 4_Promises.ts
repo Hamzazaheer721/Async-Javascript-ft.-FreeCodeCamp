@@ -8,7 +8,7 @@ const stocks = {
 let isShopOpen = true
 
 const order = (time: number, work: () => void) => {
-  const promise = new Promise((resolve, reject) => {
+  const promise: Promise<typeof work | void> = new Promise((resolve, reject) => {
     if (isShopOpen) {
       setTimeout(() => {
         resolve(work())
