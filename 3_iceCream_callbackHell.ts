@@ -67,3 +67,10 @@ order(2, production)
 // it will instruct like as follows.
 // first do this, then this, then this and etc
 // code hence becomes maintable
+
+
+// we have to keep 4 things in mind
+// Relationship between time and work
+// Promise chaining ie., return, return
+// Error handling
+// The .finally handler
