@@ -12,6 +12,7 @@ const order = (firstName: number, call_production: () => void): void => {
   }, 2000)
 }
 
+// Callback hell has been created it looks like the following visually
 const production = (): void => {
   setTimeout(()=>{
     console.log("Production has been started")
@@ -36,5 +37,33 @@ const production = (): void => {
   },1000)
 }
 
-
 order(2, production)
+
+// Solution? Promises
+// Callbacks make relationships, parents, childrens etc
+
+
+//Callbacks code looks like as follows
+
+//////
+///////
+///////////
+///////////////
+////////////////////
+///////////////
+///////////
+//////
+///
+
+
+// Promises code looks neat and looks like as follows
+
+//////////////////////////////////
+//// //////////////////////////
+//// //////////////////////////
+//// //////////////////////////
+//// //////////////////////////
+
+// it will instruct like as follows.
+// first do this, then this, then this and etc
+// code hence becomes maintable
