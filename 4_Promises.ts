@@ -38,3 +38,27 @@ order(2000, () => console.log(`${stocks.fruits[0]} was selected`))
     )
   })
   .then(() => order(2000, () => console.log("Ice cream has been served")))
+  .then(() => {
+    isShopOpen = false
+  })
+  .then(() => {
+    return order(2000, () =>
+      console.log("Ops, I forgot to buy more Icecreams.")
+    ) //this won't run now and catch will be executed
+  })
+  .catch(() => {
+    console.log("Customer has left")
+  })
+  .finally(() => {    // finally executes whether promise is rejected or accepted
+    console.log("day ended, our shop is closed")
+  })
+  .then(() => {
+    isShopOpen = true
+  })
+  .finally(() => {
+    console.log("I am opening this shop for you only.")
+    isShopOpen = false
+  })
+  .then(() => {
+    return order(2000, () => console.log("Customer leaves with happy face")) //this won't run now and catch will be executed
+  })
