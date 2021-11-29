@@ -7,7 +7,7 @@ const stocks = {
 
 let isShopOpen = true
 
-const order = (time: number, work: () => void) => {
+const order = (time: number, work: () => void): Promise<typeof work | void> => {
   const promise: Promise<typeof work | void> = new Promise((resolve, reject) => {
     if (isShopOpen) {
       setTimeout(() => {
